@@ -4,10 +4,8 @@ sudo apt-get -y install sed
 sudo apt-get -y install wget
 sudo apt-get -y install cabextract
 sudo apt-get -y install wine-stable
-export WINEARCH=win32
-export WINEPREFIX=~/.wine
+WINEARCH="win32" WINEPREFIX="$HOME/prefix32" wine wineboot
 wine --version
-wineboot
 wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks -q --show-progress
 echo "Winetricks download success!"
 chmod 777 winetricks
