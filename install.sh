@@ -4,10 +4,10 @@ sudo apt-get -y install sed
 sudo apt-get -y install wget
 sudo apt-get -y install cabextract
 sudo apt-get -y install wine-stable
-WINEARCH="win32" WINEPREFIX="$HOME/prefix32" wine wineboot
+WINEARCH="win32" WINEPREFIX="$HOME/wine32" wine wineboot
 wine --version
 echo "Copy korean font file to wine"
-cp ./font/gulim.ttf ~/.wine/drive_c/windows/Fonts
+cp "./font/gulim.ttf" "$HOME/.wine/drive_c/windows/Fonts"
 wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks -q --show-progress
 echo "Winetricks download success!"
 chmod 777 winetricks
